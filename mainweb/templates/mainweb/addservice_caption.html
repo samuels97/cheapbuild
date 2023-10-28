@@ -1,0 +1,11 @@
+<div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+    <p class="fw-medium text-uppercase text-primary mb-2">Our Services</p>
+    {% if servcapt %}
+
+        {% for capt in servcapt %}
+            <h1 class="display-5 mb-4">{{capt.title}}</h1>
+        {% endfor %}
+    {% else %} 
+        <h1 class="display-5 mb-4">No Caption provided for now!</h1>
+    {% endif %}
+</div>

@@ -1,0 +1,65 @@
+{% extends 'mainweb/main.html'  %}
+{% load static %}
+{% block content %}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <h1 class="display-3 text-white animated slideInRight">Our Team</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb animated slideInRight mb-0">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Our Team</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="fw-medium text-uppercase text-primary mb-2">Our Team</p>
+            <h3 class="display-5 mb-5">Dedicated Team Members</h3>
+        </div>
+        <div class="row g-4">
+           {% if team %} 
+            {% for info in team %}
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item">
+                    <img class="img-fluid" src="{{info.image.url}}" alt="">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 btn-square bg-primary" style="width: 90px; height: 90px;">
+                            <i class="fa fa-2x fa-share text-white"></i>
+                        </div>
+                        <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4"
+                            style="height: 90px;">
+                            <h5>{{info.name}}</h5>
+                            <span class="text-primary">{{info.role}}</span>
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark rounded-circle mx-1" href="{{info.linkedin}}"><i
+                                    class="fab fa-linkedin"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle mx-1" href="{{info.faceBook}}"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle mx-1" href="{{info.twitter}}"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle mx-1" href="{{info.instagram}}"><i
+                                        class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+        <h2>No information about staff Provided yet</h2>
+        {% endif %}
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+{% endblock content %}

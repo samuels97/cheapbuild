@@ -1,0 +1,72 @@
+{% extends 'mainweb/main.html'  %}
+{% load static %}
+{% block content %}
+
+<!-- slider Area Start-->
+<div class="slider-area ">
+    <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/about.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                     <div class="hero-cap pt-100">
+                        <h2></h2>
+                        <nav aria-label="breadcrumb ">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'mainweb:homepage' %}">Home</a></li>
+                        <li class="breadcrumb-item"><a href=""> {{service.title}}</a></li> 
+                        </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br>
+<!-- slider Area End-->
+<section class="project-area pt-3">
+    <div class="container">
+        <div class="project-heading">
+            <div class="row align-items-end">
+                <div class="col-lg-6">
+                    <div class="section-tittle section-tittle3">
+                        <div class="front-text">
+                            <h1 class="text-danger">{{service.title}}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-12">
+            <!-- Nav Card -->
+            <div class="tab-content active" id="nav-tabContent">
+                <!-- card ONE -->
+                <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">    
+                    <div class="project-caption">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-6">
+                                <div class="single-project mb-30">
+                                    <div class="project-img">
+                                        <img src="{{service.imageURL}}" height="500px" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-6">
+                                <div class="jumbotron jumbotron-fluid">
+                                    <div class="text-justify">
+                                        <p>{{service.body}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial Start -->
+{% include 'mainweb/testimonials.html' %}
+<!-- Testimonial End -->
+
+{% endblock content %}

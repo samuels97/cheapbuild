@@ -1,0 +1,48 @@
+{% extends 'mainweb/main.html'  %}
+{% load static %}
+{% block content %}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <h1 class="display-3 text-white animated slideInRight">Projects</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb animated slideInRight mb-0">
+                <li class="breadcrumb-item"><a href="">Home</a></li>
+                <li class="breadcrumb-item"><a href="">Pages</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Projects</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Project Start -->
+{% include 'mainweb/addproject.html' %}
+<!-- Project End -->
+
+<!-- Project pending project Start -->
+<div class="container-fluid my-5 px-0">
+    <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+        <p class="fw-medium text-uppercase text-primary mb-2">Our Projects</p>
+        <h3 class="display-5 mb-5">See our on going projects</h3>
+    </div>
+    <div class="owl-carousel project-carousel bg-dark wow fadeIn" data-wow-delay="0.1s">
+    {% if pends %}
+        {% for item in pends %}
+        <a class="project-item" href="">
+            <img class="img-fluid" src="{{item.image.url}}" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">{{item.title}}</h5>
+            </div>
+        </a>
+        {% endfor %}
+    {% else %}
+    <div class="project-title">
+        <h5 class="text-primary mb-0">No projects uploaded yet, you can contact admin</h5>
+    </div>
+    {% endif %}
+    </div>
+</div>
+<!-- Project pending End -->
+{% endblock %}
