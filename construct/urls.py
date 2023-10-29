@@ -24,7 +24,7 @@ from django.conf import settings
 urlpatterns = [
 	path('',include('mainweb.urls')),
     path('blog/',include('blog.urls',namespace='blog')),
-    path('ccwl/', admin.site.urls),
+    path('cp/', admin.site.urls),
 ]
 if settings.DEBUG:
     urlpatterns +=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
