@@ -1,0 +1,74 @@
+{% extends 'mainweb/main.html'  %}
+{% load static %}
+{% block title %}CCWL Construction blog {% endblock %}
+{% block content %}
+<!-- slider Area Start-->
+<div class="slider-area ">
+<div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/about.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="hero-cap pt-100">
+                    <h2> Blog</h2>
+                    <nav aria-label="breadcrumb ">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#"> Blog</a></li> 
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<section class="blog_area section-padding">
+<div class="container">
+	
+    <div class="row">
+        <div class="col-lg-8 mb-5 mb-lg-0">
+            <div class="blog_left_sidebar">
+            	{% for post in posts %}
+                <article class="blog_item">
+                	
+                    <div class="blog_item_img">
+                        <img class="card-img rounded-0" src="{{ post.imgURL }}" height="300px" alt="">
+                         <p class="blog_item_date">Published {{ post.publish }}  by {{ post.author }}</p>
+                    </div>
+
+                    <div class="blog_details">
+                     <h2> <a class="d-inline-block" href="{{ post.get_absolute_url }}">
+						{{ post.title }}
+					</a>
+					</h2>
+                        <p>{{ post.body|truncatewords:30|linebreaks }}</p>
+                        <ul class="blog-info-link">
+                            <li><a href="{{ post.get_absolute_url }}"><i class="fa fa-user"></i> Read More</a></li>
+                            <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                        </ul>
+                    </div>
+                </article>
+                {% endfor %}
+
+                {% include "pagination.html" with page=posts %}
+            </div>
+        </div>
+      {% include 'blog/blog_side.html' %}
+    </div>
+  
+</div>
+</section> 
+<!--================Blog Area =================-->
+
+<!-- {% for post in posts %}
+<h2>
+	<a href="{{ post.get_absolute_url }}">
+		{{post.title}}
+	</a>
+</h2>
+<p class="date">Published {{ post.publish }}  by {{ post.author }}</p>
+{{ post.body|truncatewords:30|linebreaks }}
+
+{% endfor %} -->
+{% endblock content %}
