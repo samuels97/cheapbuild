@@ -1,3 +1,23 @@
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+        <a class="btn btn-primary" style="background-color: #3b5998;" href="Cheap build Ltd" role="button"><i class="fab fa-facebook-f"></i></a>
+
+        <a class="btn btn-primary" style="background-color: #55acee;" href="Cheap build Ltd" role="button"><i class="fab fa-twitter"></i></a>
+
+
+        <a class="btn btn-primary" style="background-color: #ac2bac;" href="Cheap build Ltd" role="button"><i class="fab fa-instagram"></i></a>
+
+
+        <a class="btn btn-primary" style="background-color: #25d366;" href="0787098452" role="button"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="col-sm-4 float-right">
+      <i class="bi bi-telephone"></i> +256 701 819 516
+    </div>
+  </div>
+</div>-->
+
 <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
     <a href="" class="navbar-brand ps-5 me-0">
         <h1 class="text-white m-0">CHEAPBUILD</h1>
@@ -6,19 +26,20 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="/" class="nav-item nav-link active">OUR WORK</a>
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                        <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">OUR WORK</a>
+                <div class="dropdown-menu bg-light m-0">
+                    <a href="{% url 'mainweb:teampage' %}" class="dropdown-item">OUR PROJECTS</a>
+                    <a href="" class="dropdown-item">WE TRAIN</a>
+                    <a href="" class="dropdown-item">CLIMATE FRIENDLY CONSTRUCTION</a>
+                    <a href="" class="dropdown-item">WE BUILD</a>
+                </div>
+            </div>
             <a href="{% url 'mainweb:Aboutpage' %}" class="nav-item nav-link">OUR TEAM</a>
             <a href="{% url 'mainweb:servicepage' %}" class="nav-item nav-link">OUR NEWS</a>
             <a href="{% url 'mainweb:projectspage' %}" class="nav-item nav-link">WORK WITH US</a>
-            <!--<div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                <div class="dropdown-menu bg-light m-0">
-                    <a href="{% url 'mainweb:teampage' %}" class="dropdown-item">Our Team</a>
-                    <a href="" class="dropdown-item">Career</a>
-                </div>
-            </div>
-            <a href="{% url 'mainweb:contactpage' %}" class="nav-item nav-link">Contact</a>-->
+            <!--<a href="{% url 'mainweb:contactpage' %}" class="nav-item nav-link">Contact</a>-->
         </div>
         <a href="" class="btn btn-primary px-3 d-none d-lg-block">DONATE</a>
     </div>
