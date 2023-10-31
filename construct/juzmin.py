@@ -1,11 +1,11 @@
 JAZZMIN_SETTINGS = {
-    "site_title": "CCWL",
+    "site_title": "CHEAP BUILD LTD",
 
     # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_header": "CCWL LOGIN",
+    "site_header": "CHEAP BUILD LOGIN",
 
     # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_brand": "CCWL",
+    "site_brand": "CHEAP BUILD",
 
     # Logo to use for your site, must be present in static files, used for brand on top left
     "site_logo": "img/logo.png",
@@ -17,10 +17,10 @@ JAZZMIN_SETTINGS = {
     "site_icon": None,
 
     # Welcome text on the login screen
-    "welcome_sign": "Welcome to the Curgen Construction Works",
+    "welcome_sign": "Welcome to the CHEAP BUILD LTD",
 
     # Copyright on the footer
-    "copyright": "curgen construction works ltd",
+    "copyright": "CHEAP BUILD LTD",
 
     # The model admin to search from the search bar, search bar omitted if excluded
     "search_model": "auth.User",

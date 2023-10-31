@@ -14,9 +14,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-
-admin.site.index_title = "CCWL ADMIN DASHBOARD"
-
 from django.urls import include,path
 from django.conf.urls.static import static
 from django.conf import settings
