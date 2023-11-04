@@ -1,0 +1,159 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cheapbuild</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="{% static 'style.css' %}"/>
+    <style rel="stylesheet">
+        .elementor-element.elementor-element-b5d0d98:not(.elementor-motion-effects-element-type-background), .elementor-175 .elementor-element.elementor-element-b5d0d98 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+            background-color: #FFFFFF;
+        }
+        body{
+            font-family: 'Raleway', sans-serif;
+            color:#0c0c0c;
+            background-color:#ffffff;
+        }
+
+
+        /* latest news */
+        .layout_padding{
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+        .news_section .box{
+            margin-top: 55px;
+            background-color: #ffffff;
+        }
+        .news_section .heading_container{
+            -webkit-box-pack: center;
+            justify-content: center;
+        }
+        .heading_container{
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            -webkit-box-align: center;
+            align-items: center;
+            text-align: center;
+        }
+        .heading_container h2{
+            font-weight: bold;
+        }
+        .news_section .box .img-box{
+            position: relative;
+        }
+        .news_section .box .img-box img{
+            width: 100%;
+        }
+        .news_section .box .img-box .date{
+            position: absolute;
+            left: 25px;
+            bottom: 15px;
+        }
+        .news_section .box .img-box .date h5{
+            color: #f0b016;
+            font-weight: bold;
+        }
+        .news_section .box .dtail-box{
+            margin-top: 25px;
+        }
+        .news_section .box .detail-box h5{
+            font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand h1 mb-0" href="#">CHEAPBUILD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse float-right" id="navbarText">
+            <div class="">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">OUR WORK</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">OUR TEAM</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">OUR NEWS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-disabled="true" href="#">WORK WITH US</a>
+                  </li>
+                </ul>
+            </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <!--================================-->
+
+<section class="news_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Latest News
+        </h2>
+        <p>
+          Lorem Ipsum available, but the majority
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'img/meila.jpeg' %}" alt="">
+              <div class="date">
+                <h5>
+                  06 Feb 2020
+                </h5>
+              </div>
+            </div>
+            <div class="detail-box pt-3">
+              <h5>
+                Teration in some form, by injected humour
+              </h5>
+              <p>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'img/meila.jpeg' %}" alt="">
+              <div class="date">
+                <h5>
+                  06 Feb 2020
+                </h5>
+              </div>
+            </div>
+            <div class="detail-box pt-3">
+              <h5>
+                Teration in some form, by injected humour
+              </h5>
+              <p>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

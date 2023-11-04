@@ -14,9 +14,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-
-admin.site.index_title = "CCWL ADMIN DASHBOARD"
-
 from django.urls import include,path
 from django.conf.urls.static import static
 from django.conf import settings
@@ -24,7 +21,7 @@ from django.conf import settings
 urlpatterns = [
 	path('',include('mainweb.urls')),
     path('blog/',include('blog.urls',namespace='blog')),
-    path('ccwl/', admin.site.urls),
+    path('cp/', admin.site.urls),
 ]
 if settings.DEBUG:
     urlpatterns +=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
