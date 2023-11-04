@@ -1,9 +1,50 @@
-
+{% load static %}
+<div class="wrap">
+	<div class="container-fluid bg-dark"> 
+		<div class="row p-3">
+			<div class="col-md-6 d-flex align-items-center">
+				<p class="mb-0 phone pl-md-2">
+					<a class="text-white" href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +256778555912</a> 
+					<a class="text-white" href="#"><span class="fa fa-paper-plane p-2"></span> cheapbuild@gmail.com</a>
+				</p>
+			</div>
+			<div class="col-md-6 d-flex justify-content-md-end">
+				<div class="social-media mr-4">
+                    <p class="mb-0 d-flex">
+                        <a href="#" class="d-flex align-items-center justify-content-center p-2"><span class="bi bi-facebook"><i class="sr-only"></i></span></a>
+                        <a href="#" class="d-flex align-items-center justify-content-center p-2"><span class="bi bi-twitter"><i class="sr-only"></i></span></a>
+                        <a href="#" class="d-flex align-items-center justify-content-center p-2"><span class="bi bi-youtube"><i class="sr-only"></i></span></a>
+                        <a href="#" class="d-flex align-items-center justify-content-center p-2"><span class="bi bi-instagram"><i class="sr-only"></i></span></a>
+                    </p>
+                </div>
+		    </div>
+		</div>
+	</div>
+</div>
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
+    <a href="/" class="navbar-brand ps-5 me-0">
+        <!-- <h1 class="text-white m-0">Cheap Build</h1> -->
+        <img style="width: 50px;" class="rounded-circle" src="{% static 'img/logo.png' %}">
     </a>
     <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
     </button>
-
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">OUR WORK</a>
+                <div class="dropdown-menu bg-light m-0">
+                    <a href="{% url 'mainweb:projectspage' %}" class="dropdown-item">Our Projects</a>
+                    <a href="" class="dropdown-item">We Train</a>
+                    <a href="" class="dropdown-item">We Build</a>                   
+                </div>
+            </div>
+            <!-- <a href="{% url 'mainweb:Aboutpage' %}" class="nav-item nav-link">About</a> -->
+            <a href="{% url 'mainweb:teampage' %}" class="nav-item nav-link">OUR TEAM</a>
+            <!-- <a href="{% url 'mainweb:servicepage' %}" class="nav-item nav-link">Services</a> -->
+            <a href="" class="nav-item nav-link">OUR NEWS</a>
+           
+            <a href="{% url 'mainweb:contactpage' %}" class="nav-item nav-link">WORK WITH US</a>
         </div>
         <a href="" class="btn btn-primary px-3 d-none d-lg-block">DONATE</a>
     </div>
