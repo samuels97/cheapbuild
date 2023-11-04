@@ -103,9 +103,9 @@ class Banners(Timez):
 
     def clean(self):
         super().clean()
-        if self.image.width != 1920 or self.image.height != 1088:
+        if self.image.width != 1920 or self.image.height != 1080:
             raise ValidationError("Image dimensions should be at least 1920x1088 pixels.")
-        elif self.image.width != 1920 or self.image.height != 1088:
+        elif self.image.width != 1920 or self.image.height != 1080:
             raise ValidationError("Image dimensions should be at most 1920x1088 pixels.")
 
 

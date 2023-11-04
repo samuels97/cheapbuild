@@ -120,7 +120,6 @@ h6,
     height: 75px;
     display: flex;
     align-items: center;
-    background: var(--primary);
 }
 
 .navbar .navbar-brand::after {
@@ -131,7 +130,6 @@ h6,
     top: 0;
     right: -25px;
     transform: skewX(-30deg);
-    background-color: var(--primary);
 }
 
 .navbar .navbar-nav .nav-link {
