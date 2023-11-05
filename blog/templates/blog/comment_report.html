@@ -1,0 +1,7 @@
+<div class="entry-meta">
+  {% with comments.count as total_comments %}         
+    <ul>
+      <li class="d-flex align-items-center"><i class="icofont-comment"></i> <a href="">{{ total_comments }} Comment {{ total_comments|pluralize }}</a></li>
+    </ul>
+  {% endwith %}
+</div>

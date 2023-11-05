@@ -15,8 +15,6 @@ path('projects/', views.Project_view, name="projectspage"),
 
 path('project_details/<str:pk_proj>/', views.Project_Detail_view, name="project_details"),
 
-path('blogs/', views.Blog_view, name="blogpage"),
-path('blog/', views.Blog_detview, name="blog_detailspage"),
 path("contact/",views.Contact_view, name="contactpage"),
 
 ]

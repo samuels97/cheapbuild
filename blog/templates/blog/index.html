@@ -1,0 +1,40 @@
+{% extends 'mainweb/main.html' %}
+{% load static %}
+{% block content %}
+<main id="main">
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 entries">
+            {% if tag %}
+              <h2>Posts tagged with "{{tag.name}}"</h2>
+            {% endif %}
+            {% if posts %}
+          	{% for post in posts %}
+            <article class="entry" data-aos="fade-up">
+              <div class="entry-img">
+                <img src="{{post.imgURL}}" alt="" class="img-fluid">
+              </div>
+              <h2 class="entry-title">
+                <a class="stretched-link" href="">{{post.title}}</a>
+              </h2>
+              <div class="entry-content">
+                <p>{{ post.body|truncatewords:30|safe }}</p>
+              </div>
+            </article>
+            {% endfor %}
+            {% else %}
+              <h5>No Posts Made made yet, Please contacts on a contact page</h5>
+            {% endif %}
+            <div class="paginator">
+              <p class="paginator">{% include "mainweb/pagination.html" with page=posts %}</p>
+            </div>
+          </div>
+          {% include 'blog/sidebar.html' %}
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+{% endblock content %}
