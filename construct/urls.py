@@ -20,6 +20,7 @@ from django.conf import settings
 
 urlpatterns = [
 	path('',include('mainweb.urls')),
+    path('blog/', include('blog.urls')),
     path('cp/', admin.site.urls),
 ]
 if settings.DEBUG:

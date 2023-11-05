@@ -38,13 +38,6 @@ def Team_view(request):
 	context = {'team':team}
 	return render(request, 'mainweb/team.html',context)
 
-def Blog_view(request):
-
-	return render(request, 'mainweb/blog.html')
-
-def Blog_detview(request):
-
-	return render(request,  'mainweb/blog_details.html')
 
 def Contact_view(request):
 	context = get_contact_info()
