@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from.models import*
-from blog.models import*
 from .utils import get_contact_info
 # Create your views here.
 
