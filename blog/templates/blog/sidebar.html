@@ -1,11 +1,11 @@
 {% load static %}
-<div class="col-lg-3">
+<div class="col-lg-4">
   <div class="sidebar" data-aos="fade-left">
     <h3 class="sidebar-title">Recent Posts</h3>
     <div class="sidebar-item recent-posts">
       {% for post in posts %}
       <div class="post-item clearfix">
-        <img style="height: 80px;" src="{{post.imgURL}}" alt="">
+        <img src="{{post.imgURL}}" alt="">
         <h4><a href="">{{post.title}}</a></h4>
         <time datetime="2020-01-01">{{post.created}}</time>
       </div>
