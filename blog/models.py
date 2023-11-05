@@ -47,9 +47,9 @@ class Post(models.Model):
 	
 	def clean(self):
 		super().clean()
-		if self.img.width < 1920 or self.img.height < 1088:
+		if self.img.width < 1920 or self.img.height < 1080:
 			raise ValidationError("Image minimum dimensions should be at least 1920x1088 pixels.")
-		elif self.img.width > 1920 or self.img.height > 1088:
+		elif self.img.width > 1920 or self.img.height > 1080:
 			raise ValidationError("Image maximum dimensions should be at most 1920x1088 pixels.")
 
 class Comment(models.Model):
