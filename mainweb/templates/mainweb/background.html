@@ -1,7 +1,7 @@
 {% load static %}
 <!-- About Start -->
 <div class="container-xxl py-5">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row g-5">
             <div class="col-lg-6">
                 <div class="row gx-3 h-100">
@@ -17,7 +17,7 @@
                 <p class="fw-medium text-uppercase text-primary mb-2">About Us</p>
                 {% for info in bg|slice:":1" %}
                 <h1 class="display-5 mb-4">{{info.title}}</h1>
-                <p class="mb-4">{{info.descriptions|safe}}</p>
+                <p class="mb-4 text-justify">{{info.descriptions|safe}}</p>
                 {% endfor %}
 
                 <div class="d-flex align-items-center mb-4">
