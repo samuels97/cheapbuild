@@ -32,8 +32,7 @@ def Updates_list(request, tag_slug=None):
 		post = post.filter(tags__in=[tag])
 
 	context = {
-		'posts':posts,'page':page,'tag':tag,
-		'locate':locate,'emailz':emailz,'phones':phones
+		'posts':posts,'page':page,'tag':tag
 	}
 	return render(request, 'blog/index.html', context)
 
