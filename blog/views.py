@@ -12,9 +12,6 @@ def error_404_view(request,exception):
 	return HttpResponse('Does Not Exist')
 
 def Updates_list(request, tag_slug=None):
-	locate = Location.objects.all()
-	emailz = Email.objects.all()
-	phones = OfficePhone.objects.all()
 	posts = Post.objects.all()
 
 	# pagination
