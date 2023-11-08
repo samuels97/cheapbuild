@@ -42,14 +42,12 @@ def Updates_list(request, tag_slug=None):
 
 
 
-def Update_details_view(request,pk_d):
+def Update_details_view(request,pk):
 
-	locate = Location.objects.all().order_by('-date_created')
-	emailz = Email.objects.all().order_by('-date_created')
-	phones = OfficePhone.objects.all().order_by('-date_created')
-
-	social = socialMedia.objects.all()
-	post = Post.objects.get(id=pk_d)
+	locate = Location.objects.all()
+	emailz = Email.objects.all()
+	phones = OfficePhone.objects.all()
+	post = Post.objects.get(id=pk)
 
 	posts = Post.objects.all()
 	# display all post commets
@@ -64,13 +62,13 @@ def Update_details_view(request,pk_d):
 			new_comment = comment_form.save(commit=False)
 			new_comment.post = post
 			new_comment.save()
-			return redirect('blog:bmpage') 
+			return redirect('blog:blog_list') 
 	else:
 		comment_form = CommentForm()
 	
 	context = {
 		'post':post,'posts':posts, 'comments':comments
-		,'comment_form':comment_form,'new_comment':new_comment,'social':social,
+		,'comment_form':comment_form,'new_comment':new_comment,
 		'locate':locate,'emailz':emailz,'phones':phones
 		}
 	return render(request, 'blog/update_details.html', context)

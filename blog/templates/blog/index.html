@@ -3,7 +3,7 @@
 {% block content %}
 <main id="main">
     <!-- ======= Blog Section ======= -->
-    <section id="blog" class="blog">
+    <section id="blog" class="blog pt-5">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 entries">
@@ -17,7 +17,7 @@
                 <img src="{{post.imgURL}}" alt="" class="img-fluid">
               </div>
               <h2 class="entry-title">
-                <a class="stretched-link" href="">{{post.title}}</a>
+                <a class="stretched-link" href="{% url 'blog:detailspage' post.id %}">{{post.title}}</a>
               </h2>
               <div class="entry-content">
                 <p>{{ post.body|truncatewords:30|safe }}</p>
