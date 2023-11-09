@@ -3,7 +3,7 @@
 {% block content %}
   {% include 'mainweb/slides.html' %}
 
-   
+
 {% include 'mainweb/background.html' %}
 
 
@@ -63,7 +63,7 @@
                                             <span>{{info.body}}</span>
                                         {% endfor %}
                                     {% else %}
-                                    <span>No vision yet provied</span>
+                                    <span>No vision yet provided</span>
                                     {% endif %}
                                 </div>
                             </div>
@@ -74,14 +74,14 @@
                                     <i class="fa fa-check text-white"></i>
                                 </div>
                                 <div class="ms-4">
-                                    <h4>Our main pbjective</h4>
+                                    <h4>Our main objective</h4>
 
                                     {% if objz %}
                                         {% for info in objz %}
                                             <span>{{info.body|safe}}</span>
                                         {% endfor %}
                                     {% else %}
-                                        <span>No main objectivw yet provied</span>
+                                        <span>No main objective yet provided</span>
                                     {% endif %}
                                 </div>
                             </div>

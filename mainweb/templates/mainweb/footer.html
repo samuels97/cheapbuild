@@ -6,16 +6,16 @@
 
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">OUR WORK</h5>
-                    <a class="btn btn-link" href="">Latest Projects</a>
-                    <a class="btn btn-link" href="">We Train</a>
-                    <a class="btn btn-link" href="">Climate Friendly Construction</a>
-                    <a class="btn btn-link" href="">We Build</a>
+                    <a class="btn btn-link" href="{% url 'mainweb:projectspage' %}">Latest Projects</a>
+                    <a class="btn btn-link" href="{% url 'mainweb:projectspage' %}">We Train</a>
+                    <a class="btn btn-link" href="{% url 'mainweb:projectspage' %}">Climate Friendly Construction</a>
+                    <a class="btn btn-link" href="{% url 'mainweb:projectspage' %}">We Build</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">QUICK LINKS</h5>
-                    <a class="btn btn-link" href="">Home</a>
-                    <a class="btn btn-link" href="">Our Team</a>
-                    <a class="btn btn-link" href="">Our News</a>
+                    <a class="btn btn-link" href="/">Home</a>
+                    <a class="btn btn-link" href="{% url 'mainweb:teampage' %}">Our Team</a>
+                    <a class="btn btn-link" href="{% url 'blog:blog_list' %}">Our News</a>
                     <a class="btn btn-link" href="">Make a Donation</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
