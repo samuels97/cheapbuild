@@ -34,7 +34,7 @@ def Service_details_view(request,pk_serv):
 	
 
 def Team_view(request):
-	team    = Staff.objects.filter().order_by('department')
+	team    = Staff.objects.filter().order_by('name')
 	context = {'team':team}
 	return render(request, 'mainweb/team.html',context)
 
