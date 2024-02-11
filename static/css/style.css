@@ -66,7 +66,8 @@ h6,
 }
 
 .btn-navyblue{
-    color: #000080;
+  background-color: navy;
+  color: white;
 }
 
 .btn-square {
