@@ -24,10 +24,9 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <p class="fw-medium text-uppercase text-primary mb-2">Why Choosing Us!</p>
                     {% if choose %}
                         {% for items in choose %}
-                            <h1 class="display-5 mb-4">{{items.tag}}</h1>
+                            <h4>{{items.tag}}</h4>
                             <div class="mb-4">{{items.description|safe}}</div>
                         {% endfor %}
                     {% else %}

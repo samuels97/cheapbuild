@@ -30,43 +30,45 @@
                 <div class="col-lg-6">
                     <div class="section-tittle section-tittle3">
                         <div class="front-text">
-                            <h1 class="text-danger">{{service.title}}</h1>
+                            <h1 class="text-primary">{{service.title}}</h1>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     <div class="row">
-        <div class="col-12">
-            <!-- Nav Card -->
-            <div class="tab-content active" id="nav-tabContent">
-                <!-- card ONE -->
-                <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">    
-                    <div class="project-caption">
-                        <div class="row">
-                            <div class="col-lg-5 col-md-6">
-                                <div class="single-project mb-30">
-                                    <div class="project-img">
-                                        <img src="{{service.imageURL}}" height="500px" alt="">
+        <div class="container">
+            <div class="col-12">
+                <!-- Nav Card -->
+                <div class="tab-content active" id="nav-tabContent">
+                    <!-- card ONE -->
+                    <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">    
+                        <div class="project-caption">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="single-project mb-30">
+                                        <div class="project-img">
+                                            <img src="{{service.imageURL}}" height="450px" alt="">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-7 col-md-6">
-                                <div class="jumbotron jumbotron-fluid">
-                                    <div class="text-justify">
-                                        <p>{{service.body}}</p>
+                                <div class="col-lg-7 col-md-6">
+                                    <div class="jumbotron jumbotron-fluid">
+                                        <div class="text-justify">
+                                            <p>{{service.body|safe}}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>   
+                    </div>   
+                </div>
             </div>
         </div>
     </div>
 </section>
 <!-- Testimonial Start -->
-{% include 'mainweb/testimonials.html' %}
+{% include 'mainweb/addtestimonials.html' %}
 <!-- Testimonial End -->
 
 {% endblock content %}

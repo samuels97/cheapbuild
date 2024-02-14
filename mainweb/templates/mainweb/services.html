@@ -42,7 +42,7 @@
                             {{item.body|safe|truncatechars:100}}
                         </div>
                     </div>
-                    <a class="btn btn-light" href="">Read More</a>
+                    <a class="btn btn-light" href="{% url 'mainweb:service_details' item.id  %}">Read More</a>
                 </div>
             </div>
             {% endfor %}

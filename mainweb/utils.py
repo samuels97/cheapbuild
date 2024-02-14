@@ -19,7 +19,7 @@ def get_contact_info():
         bgimg    = backgroudImages.objects.filter().order_by('-created')
         project    = Projects.objects.filter(status='finshed').order_by('-created')
         pends    = Projects.objects.filter(status='pending').order_by('-created')
-        team    = Staff.objects.filter().order_by('department')[:3]
+        team    = Staff.objects.filter().order_by('-name')[:3]
         testify    = Testimony.objects.filter().order_by('-created')
 
     except Exception as e:

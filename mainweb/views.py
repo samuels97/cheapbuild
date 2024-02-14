@@ -28,13 +28,14 @@ def Service_view(request):
 
 def Service_details_view(request,pk_serv):
 	service = Services.objects.get(id=pk_serv)
+	testify    = Testimony.objects.filter().order_by('-created')
 
-	context = {'service':service}
+	context = {'service':service, 'testify':testify}
 	return render(request, 'mainweb/service_details.html',context)
 	
 
 def Team_view(request):
-	team    = Staff.objects.filter().order_by('name')
+	team    = Staff.objects.filter().order_by('-name')
 	context = {'team':team}
 	return render(request, 'mainweb/team.html',context)
 
