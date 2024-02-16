@@ -7,10 +7,10 @@
     <div class="owl-carousel project-carousel bg-dark wow fadeIn" data-wow-delay="0.1s">
     {% if project %}
         {% for item in project %}
-        <a class="project-item" href="">
+        <a class="project-item" href="{% url 'mainweb:project_details' item.id %}">
             <img class="img-fluid" src="{{item.image.url}}" alt="">
             <div class="project-title">
-                <h5 class="text-primary mb-0">{{item.title}}</h5>
+                <p class="text-primary mb-0">{{item.title}}</p>
             </div>
         </a>
         {% endfor %}
