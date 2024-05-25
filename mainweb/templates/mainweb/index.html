@@ -1,1 +1,137 @@
+{% extends 'mainweb/main.html'  %}
+{% load static %}
+{% block content %}
+  {% include 'mainweb/slides.html' %}
 
+
+{% include 'mainweb/background.html' %}
+
+
+    <!-- Features Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative me-lg-4">
+                        <img class="img-fluid w-100" src="{% static 'img/feature.jpeg' %}" alt="">
+                        <span
+                            class="position-absolute top-50 start-100 translate-middle bg-white rounded-circle d-none d-lg-block"
+                            style="width: 120px; height: 120px;"></span>
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    {% if choose %}
+                        {% for items in choose %}
+                            <h4>{{items.tag}}</h4>
+                            <div class="mb-4">{{items.description|safe}}</div>
+                        {% endfor %}
+                    {% else %}
+                        <!--<h2 class="mb-4">No info provided abouth this</h2>-->
+                    {% endif %}
+                    <div class="row gy-4">
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h4>Our Mission</h4>
+                                    {% if msn %}
+                                        {% for info in msn %}
+                                            <span>{{info.body}}</span>
+                                        {% endfor %}
+                                    {% else %}
+                                    <span>No mission yet provied</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 tc btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h4>Our Vision</h4>
+                                    {% if vsn %}
+                                        {% for info in vsn %}
+                                            <span>{{info.body}}</span>
+                                        {% endfor %}
+                                    {% else %}
+                                    <span>No vision yet provided</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h4>Our main objective</h4>
+
+                                    {% if objz %}
+                                        {% for info in objz %}
+                                            <span>{{info.body|safe}}</span>
+                                        {% endfor %}
+                                    {% else %}
+                                        <span>No main objective yet provided</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
+                            allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+    <!-- Service Start -->
+    {% include 'mainweb/addservices.html' %}
+    <!-- Service End -->
+
+
+    <!-- Project Start -->
+    {% include 'mainweb/addproject.html' %}
+    <!-- Project End -->
+
+
+    <!-- Team Start -->
+    {% include 'mainweb/addstaff.html' %}
+    <!-- Team End -->
+
+
+<!-- Testimonial Start -->
+{% include 'mainweb/addtestimonials.html' %}
+<!-- Testimonial End -->
+
+{% endblock %}

@@ -1,1 +1,23 @@
-
+{% load static %}
+<div class="container-fluid py-5 my-5 px-0">
+    <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+        <p class="fw-medium text-uppercase text-primary mb-2"></p>
+        <h5 class="display-0 mb-5">Our Products</h5>
+    </div>
+    <div class="owl-carousel project-carousel bg-dark wow fadeIn" data-wow-delay="0.1s">
+    {% if project %}
+        {% for item in project %}
+        <a class="project-item" href="{% url 'mainweb:project_details' item.id %}">
+            <img class="img-fluid" src="{{item.image.url}}" alt="">
+            <div class="project-title">
+                <p class="text-primary mb-0">{{item.title}}</p>
+            </div>
+        </a>
+        {% endfor %}
+    {% else %}
+    <!--<div class="project-title">
+        <h5 class="text-primary mb-0">No projects uploaded yet, you can contact admin</h5>
+    </div>-->
+    {% endif %}
+    </div>
+</div>
